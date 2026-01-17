@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Example Platinum Sponsor",
+    "tier": "platinum",
+    "logo": "images/sponsors/platinum-sponsor.png",
+    "description": "Supporting our community",
+    "website": "https://example.com"
+  },
+  {
+    "name": "Example Gold Sponsor",
+    "tier": "gold",
+    "logo": "images/sponsors/gold-sponsor.png",
+    "description": "Proud supporter of VES",
+    "website": "https://example.com"
+  },
+  {
+    "name": "Example Silver Sponsor",
+    "tier": "silver",
+    "logo": "images/sponsors/silver-sponsor.png",
+    "description": "Vienna community partner",
+    "website": "https://example.com"
+  },
+  {
+    "name": "Example Bronze Sponsor",
+    "tier": "bronze",
+    "logo": "images/sponsors/bronze-sponsor.png",
+    "description": "Supporting local schools",
+    "website": "https://example.com"
+  },
+  {
+    "name": "Example VES Cheerleader",
+    "tier": "cheerleader",
+    "description": "Proud VES supporter"
+  }
+]

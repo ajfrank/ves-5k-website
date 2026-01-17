@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Add Sponsors - VES Vikings 5K</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #FF6B6B;
+            border-bottom: 3px solid #4ECDC4;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #4ECDC4;
+            margin-top: 30px;
+        }
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #FF6B6B;
+            border-radius: 5px;
+        }
+        .step-number {
+            display: inline-block;
+            background: #FF6B6B;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        code {
+            background: #2C3E50;
+            color: #4ECDC4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #2C3E50;
+            color: #ECF0F1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .tier-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        .platinum { background: linear-gradient(135deg, #E5E4E2, #FFFFFF); }
+        .gold { background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .silver { background: linear-gradient(135deg, #C0C0C0, #E8E8E8); }
+        .bronze { background: linear-gradient(135deg, #CD7F32, #D4A017); color: white; }
+        .success {
+            background: #D4EDDA;
+            border: 1px solid #2ECC71;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #FFF3CD;
+            border: 1px solid #F39C12;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background: #FF6B6B;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            background: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 How to Add Sponsors to Your Website</h1>
+        
+        <p style="font-size: 1.1em; color: #666;">
+            This guide will show you exactly how to add sponsor logos to the VES Vikings 5K website. 
+            No coding experience required!
+        </p>
+
+        <h2>🎯 Quick Overview</h2>
+        <p>Adding sponsors is as simple as:</p>
+        <ol>
+            <li>Save the sponsor's logo image</li>
+            <li>Edit the <code>sponsors.json</code> file</li>
+            <li>Refresh the website - Done! 🎉</li>
+        </ol>
+
+        <h2>📋 Step-by-Step Instructions</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Get the Sponsor Logo</strong>
+            <p>Ask the sponsor for their logo. Best formats are:</p>
+            <ul>
+                <li>PNG (recommended - supports transparent backgrounds)</li>
+                <li>JPG or JPEG</li>
+                <li>SVG (vector format)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Save Logo to the Right Folder</strong>
+            <p>Save the logo file to: <code>images/sponsors/</code></p>
+            <p>Use a simple filename like: <code>company-name.png</code></p>
+            <p>Example: <code>images/sponsors/vienna-dental.png</code></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Open sponsors.json</strong>
+            <p>Find and open the file called <code>sponsors.json</code></p>
+            <p>You can use:</p>
+            <ul>
+                <li>TextEdit (Mac)</li>
+                <li>Notepad (Windows)</li>
+                <li>Any text editor</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>Add the Sponsor Information</strong>
+            <p>Copy this template and fill in the details:</p>
+            <pre>{
+  "name": "Company Name Here",
+  "tier": "gold",
+  "logo": "images/sponsors/filename.png",
+  "description": "Short description",
+  "website": "https://website.com"
+}</pre>
+        </div>
+
+        <h2>🏅 Sponsorship Tiers</h2>
+        <p>Choose the correct tier for your sponsor:</p>
+        <div style="margin: 20px 0;">
+            <span class="tier-badge platinum">⭐ platinum</span> - Largest display, top sponsors<br>
+            <span class="tier-badge gold">🥇 gold</span> - Large display<br>
+            <span class="tier-badge silver">🥈 silver</span> - Medium display<br>
+            <span class="tier-badge bronze">🥉 bronze</span> - Standard display
+        </div>
+
+        <h2>✅ Complete Example</h2>
+        <p>Here's what your <code>sponsors.json</code> should look like with multiple sponsors:</p>
+        <pre>[
+  {
+    "name": "Vienna Dental Care",
+    "tier": "platinum",
+    "logo": "images/sponsors/vienna-dental.png",
+    "description": "Proud supporter of VES",
+    "website": "https://viennadental.com"
+  },
+  {
+    "name": "Main Street Pizza",
+    "tier": "gold",
+    "logo": "images/sponsors/main-street-pizza.png",
+    "description": "Family-owned since 1995",
+    "website": "https://mainstreetpizza.com"
+  },
+  {
+    "name": "Vienna Coffee Shop",
+    "tier": "silver",
+    "logo": "images/sponsors/vienna-coffee.png",
+    "description": "Best coffee in Vienna!"
+  }
+]</pre>
+
+        <div class="success">
+            <strong>✅ Pro Tip:</strong> Each sponsor entry should be separated by a comma. The last entry doesn't need a comma after it.
+        </div>
+
+        <h2>⚠️ Important Notes</h2>
+
+        <div class="warning">
+            <strong>Common Mistakes to Avoid:</strong>
+            <ul>
+                <li>❌ Missing commas between entries</li>
+                <li>❌ Extra comma after the last entry</li>
+                <li>❌ Misspelling the tier name (must be exactly: platinum, gold, silver, or bronze)</li>
+                <li>❌ Wrong file path for logo (make sure it matches where you saved it)</li>
+            </ul>
+        </div>
+
+        <h2>🔍 Testing Your Changes</h2>
+        <p>After editing <code>sponsors.json</code>:</p>
+        <ol>
+            <li>Save the file</li>
+            <li>Open <code>sponsorship.html</code> in your web browser</li>
+            <li>Refresh the page (press F5 or Cmd+R)</li>
+            <li>Your new sponsor should appear!</li>
+        </ol>
+
+        <h2>🆘 Troubleshooting</h2>
+        
+        <h3>Sponsor isn't showing up?</h3>
+        <ul>
+            <li>Check that the logo file path is correct</li>
+            <li>Make sure the tier is spelled correctly (all lowercase)</li>
+            <li>Verify you saved the <code>sponsors.json</code> file</li>
+            <li>Try refreshing the browser (Ctrl+F5 or Cmd+Shift+R for hard refresh)</li>
+        </ul>
+
+        <h3>Sponsor shows but no logo?</h3>
+        <ul>
+            <li>Check that the logo file is in <code>images/sponsors/</code></li>
+            <li>Verify the filename matches exactly (including file extension)</li>
+            <li>Make sure the logo path in JSON is correct</li>
+        </ul>
+
+        <h3>Website looks broken?</h3>
+        <ul>
+            <li>Check for syntax errors in <code>sponsors.json</code></li>
+            <li>Verify you have commas between entries</li>
+            <li>Use a JSON validator: <a href="https://jsonlint.com" target="_blank">jsonlint.com</a></li>
+        </ul>
+
+        <div class="success">
+            <strong>🎉 That's it!</strong> You're now ready to add sponsors to your website. 
+            If you have any questions, contact: <strong>ves5krun@gmail.com</strong>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="button">Go to Home Page</a>
+            <a href="sponsorship.html" class="button">View Sponsors</a>
+        </div>
+    </div>
+</body>
+</html>
